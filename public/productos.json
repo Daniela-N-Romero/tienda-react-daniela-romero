@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Celular Smartphone X",
+    "price": 799,
+    "category": "celulares",
+    "description": "Pantalla de 6.5 pulgadas, 128GB de almacenamiento y cámara de 48MP."
+  },
+  {
+    "id": 2,
+    "title": "Computadora Laptop Pro",
+    "price": 1299,
+    "category": "computadoras",
+    "description": "Procesador de última generación, 16GB de RAM y 512GB SSD."
+  },
+  {
+    "id": 3,
+    "title": "Auriculares Inalámbricos",
+    "price": 150,
+    "category": "audio",
+    "description": "Cancelación activa de ruido y hasta 30 horas de batería."
+  }
+]

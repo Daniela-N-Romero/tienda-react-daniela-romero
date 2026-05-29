@@ -46,8 +46,6 @@ export default function ItemListContainer({ title, filtros = {}, limite = null }
   };
 });
 
-  console.log("Productos filtrados y listos para mostrar:", productosListos);
-
   const tittleSeccion = title || (categoria ? `Todos los ${categoria}` : "Catálogo");
 
   return (

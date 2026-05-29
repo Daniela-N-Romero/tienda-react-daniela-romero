@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { useCart } from '../../../context/CartContext';
 import { Link } from 'react-router-dom';
 import './Item.css';
 
@@ -34,7 +35,7 @@ export default function Item({ producto }) {
           <Link to={`/producto/${producto.id}`} className="btn-detail">
             Ver Detalle
           </Link>
-          <button className="btn-quick-add" onClick={addtoCart} title="Añadir rápido al carrito">
+          <button className="btn-quick-add" onClick={() => addToCart(producto)} title="Añadir rápido al carrito">
             🛒
           </button>
         </div>

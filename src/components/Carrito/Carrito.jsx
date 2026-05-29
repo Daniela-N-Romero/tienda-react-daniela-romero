@@ -6,7 +6,7 @@ import './Carrito.css';
 
 const Cart = () => {
 
-  const { cart, clearCart, getCartTotal } = useCart();
+  const { cart, clearCart, getCartTotal, decrementarCantidad, incrementarCantidad } = useCart();
 
   if (cart.length === 0) {
   return (
@@ -29,6 +29,7 @@ const Cart = () => {
         {/* Columna Izquierda: Lista de Productos */}
         <div className="cart-items-list">
           {cart.map(item => {
+            console.log(item);
             // Usamos el precio final calculado (por si tenía descuento) o el base
             const precioItem = item.precioFinal || item.price;
             
@@ -43,7 +44,22 @@ const Cart = () => {
 
                 <div className="cart-item-quantity">
                   <span className="qty-label">Cantidad</span>
-                  <span className="qty-value">{item.quantity}</span>
+                  <div className="qty-selector-container">
+                    
+                    {/* Botón menos */}
+                    <button
+                      className="btn-qty-modifier"
+                      disabled={item.quantity <= 1}
+                      onClick={() => decrementarCantidad(item.id)}
+                    >-
+                    </button>
+                    
+                    <span className="qty-value">{item.quantity}</span>
+                    
+                    {/* Botón más */}
+                    <button className="btn-qty-modifier" onClick={() => incrementarCantidad(item.id)}>+</button>
+                  
+                  </div>
                 </div>
 
                 <div className="cart-item-subtotal">

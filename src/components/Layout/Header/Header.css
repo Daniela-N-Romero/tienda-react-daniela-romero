@@ -1,0 +1,24 @@
+/* --- Estilos del Header --- */
+.site-header{
+  background-color: var(--color-header);
+}
+.header-content{
+  color: var(--texto-principal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px 10px 30px;
+  position: relative;
+  width: 100%;
+}
+
+.site-logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--color-primario);
+}
+
+.site-logo img {
+  height: 60px;
+  filter: drop-shadow(0 0 5px var(--color-primario));
+}

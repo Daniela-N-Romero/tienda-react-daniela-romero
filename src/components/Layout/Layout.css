@@ -1,0 +1,20 @@
+
+/* --- Estilos del Layout --- */
+.app-viewport {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /
+}
+
+.main-content {
+  flex: 1; 
+  padding: 20px;
+}
+/* Responsive para Desktop */
+
+@media (min-width: 1260px){
+  .main-content, .header-content,.footer-content{
+      width: 1126px;
+      margin: auto;
+  }
+}  

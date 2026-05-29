@@ -1,5 +1,36 @@
+/* Variables por defecto (Tema Claro) */
+:root, html[data-theme="claro"] {
+  --bg-principal: #ffffff;
+  --bg-secundario: #faf6f6;     
+  --texto-principal: #1a1a1a;
+  --texto-secundario: #6e6e6e;
+  --color-primario: #b8878f;     /* El rosa viejo del logo */
+  --color-dorado: #d4af37;       /* El dorado del logo */
+  --color-verde: #2f8c23;     
+  --color-header: #ffffff;       
+  --color-footer: #111111;      
+  --color-footer-texto: #e0e0e0;
+  --links-hover: #d13199;
+  --borde: #e0e0e0;
+}
 
-/* Reset básico para quitar estilos raros de Vite */
+/* Tema Oscuro (versión oscura) */
+html[data-theme="oscuro"] {
+  --bg-principal: #202020;
+  --bg-secundario: #1e1e1e;
+  --texto-principal: #f5f5f5;
+  --texto-secundario: #aaa;
+  --color-primario: #9a2671; 
+  --color-header: #28182e;   
+  --color-footer: #000000;
+  --color-dorado: #d4af37;       
+  --color-footer-texto: #aaa;
+  --links: #F0EFF4;
+  --links-hover: #d13199;
+  --borde: #333;
+}
+
+/* Reset básico para quitar estilos de Vite */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +39,8 @@
 
 body {
   font-family: sans-serif;
-  color: #333;
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza el cambio */
 }
 

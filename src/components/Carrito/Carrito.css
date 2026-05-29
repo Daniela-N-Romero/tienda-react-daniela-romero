@@ -1,0 +1,235 @@
+/* src/components/Carrito/Carrito.css */
+
+/* --- Estado Vacío --- */
+.cart-empty-container {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: var(--bg-secundario);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+}
+
+.cart-empty-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cart-empty-container p {
+  color: var(--texto-secundario);
+  margin-bottom: 30px;
+}
+
+.btn-return-shop {
+  display: inline-block;
+  background-color: var(--texto-principal);
+  color: var(--bg-principal);
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: opacity 0.2s;
+}
+
+.btn-return-shop:hover {
+  opacity: 0.9;
+}
+
+/* --- Estado Con Productos --- */
+.cart-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.cart-content-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Columna Izquierda: Lista */
+.cart-items-list {
+  flex: 2; /* Ocupa 2/3 del espacio */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-item-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-secundario);
+  border: 1px solid var(--borde);
+  padding: 20px;
+  border-radius: 8px;
+  gap: 20px;
+}
+
+.cart-item-img-placeholder {
+  width: 70px;
+  height: 70px;
+  background-color: var(--bg-principal);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-secundario);
+}
+
+.cart-item-details {
+  flex: 2;
+}
+
+.cart-item-details h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.item-unit-price {
+  font-size: 0.9rem;
+  color: var(--texto-secundario);
+}
+
+.cart-item-quantity,
+.cart-item-subtotal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.qty-label, .subtotal-label {
+  font-size: 0.75rem;
+  color: var(--texto-secundario);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.qty-value {
+  font-weight: 500;
+}
+
+.subtotal-value {
+  font-weight: bold;
+  color: var(--color-dorado);
+}
+
+/* Botón Vaciar */
+.btn-clear-cart {
+  align-self: flex-start;
+  background: none;
+  border: 1px solid var(--borde);
+  color: var(--texto-secundario);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-clear-cart:hover {
+  background-color: #ff4d4d1a;
+  color: #ff4d4d;
+  border-color: #ff4d4d;
+}
+
+/* Columna Derecha: Tarjeta Resumen */
+.cart-summary-card {
+  flex: 1; /* Ocupa 1/3 del espacio */
+  background-color: var(--bg-secundario);
+  border: 1px solid var(--borde);
+  padding: 25px;
+  border-radius: 12px;
+  position: sticky; /* Se queda pegada al hacer scroll si la lista es muy larga */
+  top: 100px; 
+}
+
+.cart-summary-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.cart-summary-card hr {
+  border: none;
+  border-top: 1px solid var(--borde);
+  margin-bottom: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+}
+
+.total-row {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px dashed var(--borde);
+  color: var(--texto-principal);
+  font-size: 1.1rem;
+}
+
+.total-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-dorado);
+}
+
+/* Botón Finalizar */
+.btn-checkout {
+  width: 100%;
+  background-color: var(--color-primario); /* El rosa viejo insignia de Pink Velvet */
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: opacity 0.2s;
+}
+
+.btn-checkout:hover {
+  opacity: 0.9;
+}
+
+/* --- Responsive para Móviles --- */
+@media (max-width: 850px) {
+  .cart-content-layout {
+    flex-direction: column;
+  }
+  
+  .cart-items-list,
+  .cart-summary-card {
+    width: 100%;
+  }
+  
+  .cart-item-card {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  
+  .cart-item-details {
+    min-width: 150px;
+  }
+  
+  .cart-item-quantity,
+  .cart-item-subtotal {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid var(--borde);
+    padding-top: 8px;
+    min-width: auto;
+  }
+  
+  .btn-clear-cart {
+    width: 100%;
+    text-align: center;
+  }
+}

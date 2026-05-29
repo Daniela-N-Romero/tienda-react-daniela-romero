@@ -1,4 +1,5 @@
 import React from 'react';
+import './Footer.css';
 
 export default function Footer() {
   const teamMembers = [
@@ -11,9 +12,9 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-content">
         <div className="empresa-info">
-          <h3>Mi Tienda Online</h3>
+          <h3>Pink Velvet</h3>
           <p>Dirección: Av. Mitre 765, Berazategui</p>
-          <p>Contacto: soporte@mitienda.com</p>
+          <p>Contacto: soporte@mpinkvelvet.com</p>
         </div>
         <hr />
 

@@ -1,0 +1,45 @@
+import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
+import './Item.css';
+
+export default function Item({ producto }) {
+    const { addToCart } = useCart();
+  
+  const [cantidad, setCantidad] = useState(0);
+
+  return (
+    <div key={producto.id} className="product-card">
+      <div className="product-img-container">
+        <div className="product-img-placeholder">
+          <span>📷 Próximamente</span>
+        </div>
+        {producto.tieneDescuento && (
+          <span className="discount-tag">{producto.porcentajeOff}% OFF</span>
+        )}
+      </div>
+      <div className="product-info">
+        <h3 className="product-name">{producto.title}</h3>
+        <div className="product-price-container">
+          {producto.tieneDescuento ? (
+            <>
+              <span className="price-old">${producto.price}</span>
+              <span className="price-current">${producto.precioFinal}</span>
+            </>
+          ) : (
+            <span className="price-current">${producto.price}</span>
+          )}
+        </div>
+        <p className="product-desc">{producto.description}</p>
+        <div className="product-card-buttons">
+          <Link to={`/producto/${producto.id}`} className="btn-detail">
+            Ver Detalle
+          </Link>
+          <button className="btn-quick-add" onClick={addtoCart} title="Añadir rápido al carrito">
+            🛒
+          </button>
+        </div>
+      </div>
+    </div>
+
+  );
+}

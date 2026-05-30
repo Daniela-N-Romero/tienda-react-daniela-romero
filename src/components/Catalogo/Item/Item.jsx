@@ -11,9 +11,7 @@ export default function Item({ producto }) {
   return (
     <div key={producto.id} className="product-card">
       <div className="product-img-container">
-        <div className="product-img-placeholder">
-          <span>📷 Próximamente</span>
-        </div>
+          <img className="product-img" src={producto.img} alt={producto.title} />
         {producto.tieneDescuento && (
           <span className="discount-tag">{producto.porcentajeOff}% OFF</span>
         )}
